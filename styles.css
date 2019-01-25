@@ -1,0 +1,112 @@
+/*
+Blue - #00274c
+Yellow - #FECE2F
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+#DesktopLogoDiv {
+    max-width: 255px;
+}
+
+.content-container {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0px;
+}
+
+
+/*Buttons*/
+.button--blue {
+    background-color: #00274c;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 15px;
+}
+
+.button--blue:hover, 
+.button--blue:focus{
+    background-color: rgba(0, 39, 76, 0.8);
+    color: white;
+    outline: 0px;
+    text-decoration: none;
+}
+
+/*Hero*/
+.hero {
+    align-items: center;
+    background-color: #00274c;
+    color: white;
+    display: flex;
+    height: 200px;
+    padding: 0px 135px;
+    position: relative;
+    width: 100%;
+}
+
+.hero__text {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero__icon {
+    color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    font-size: 207px;
+    left: 40px;
+}
+
+
+/*Promo Group*/
+
+.promo-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.promo {
+    align-items: flex-start;
+    border: 2px solid #FECE2F;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin: 35px 10px;
+    padding: 40px 20px 20px 20px;
+    position: relative;
+    width: 100%;
+}
+
+
+.promo__title {
+    background-color: white;
+    font-size: 28px;
+    padding: 0px 10px;
+    position: absolute; 
+    top: -20px;
+}
+
+.promo__body {
+    margin-bottom: 15px;
+}
+
+
+@media (min-width: 1025px) {
+    .promo-group {
+        flex-wrap: nowrap;
+    }
+    
+    .promo {
+        width: 33%;
+    }
+    
+    .promo:first-child {
+        margin-left: 0px;
+    }
+    .promo:last-child {
+        margin-right: 0px;
+    }
+}
