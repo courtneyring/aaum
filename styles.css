@@ -34,6 +34,10 @@ padding-top: 0px;
     padding: 0px;
 }
 
+#MPOuterMost.full #HEADER {
+    margin-bottom: 7px;
+}
+
 #NAV {
     background-color: #525F6C;
     border-width: 0px;
