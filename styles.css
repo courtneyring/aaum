@@ -1,6 +1,9 @@
 /*
 Blue - #00274c
 Yellow - #FECE2F
+
+Nav Grey - #525F6C
+
 */
 
 * {
@@ -18,6 +21,95 @@ Yellow - #FECE2F
 }
 
 
+/* Nav Default Overrides */
+#MPOuterHeader {
+    background-color: #525F6C;
+}
+
+#MPContentArea {
+padding-top: 0px;
+}
+
+#MPheader>div.row {
+    padding: 0px;
+}
+
+#NAV {
+    background-color: #525F6C;
+    border-width: 0px;
+}
+
+#MPButtonBar .navbar.navbar-default {
+    border-width: 0px;
+    background-color: #525F6C;
+    border-color: #525F6C;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+#MainCopy_ContentWrapper {
+    margin-top: 0px;
+}
+
+#MainCopy_ContentWrapper > .row.row-wide.clearfix:first-child {
+max-width: none 
+}
+#MainCopy_ContentWrapper > .row.row-wide.clearfix:first-child > .col-md-12.section1 {
+    padding: 0px;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+
+
+.flex-column {
+    display: flex; 
+    flex-direction: column;
+}
+
+/*Fonts*/
+.text__header {
+    border-bottom: 2px solid #FECE2F;
+    color: #00274c;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text__label {
+    color: rgba(103,100,101, 0.7);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.text__value {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+/* Text Block */
+.text__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-block__label-value {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.text-block__label-value .fa-envelope {
+    font-size: 12px;
+}
+
 /*Buttons*/
 .button--blue {
     background-color: #00274c;
@@ -34,14 +126,37 @@ Yellow - #FECE2F
     text-decoration: none;
 }
 
+.button--yellow {
+    background-color: #FECE2F;
+    border-radius: 5px;
+    color: black;
+    padding: 5px 15px;
+}
+
+.button--yellow:hover, 
+.button--yellow:focus{
+    background-color: rgba(254, 206, 47, 0.8);
+    color: white;
+    outline: 0px;
+    text-decoration: none;
+}
+
 /*Hero*/
 .hero {
-    align-items: center;
     background-color: #00274c;
     color: white;
+display: flex;
+    height: 230px;
+justify-content: center;
+    width: 100%;
+}
+
+.hero__container {
+    align-items: center;
     display: flex;
-    height: 200px;
-    padding: 0px 135px;
+    height: 100%;
+    justify-content: flex-start;
+    max-width: 1170px;
     position: relative;
     width: 100%;
 }
@@ -49,13 +164,19 @@ Yellow - #FECE2F
 .hero__text {
     font-size: 50px;
     font-weight: bold;
+    line-height: 50px;
+    margin-left: 100px;
+}
+
+.hero__subtext {
+    font-size: 35px;
+    line-height: 35px;
 }
 
 .hero__icon {
     color: rgba(255, 255, 255, 0.2);
     position: absolute;
     font-size: 207px;
-    left: 40px;
 }
 
 
@@ -93,8 +214,37 @@ Yellow - #FECE2F
     margin-bottom: 15px;
 }
 
+/*Social Links*/
+.social {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.social__link:hover > .social__icon{
+   color: rgba(0, 39, 76, 0.8);
+}
+
+.social__icon {
+    color: #00274c;
+    font-size: 30px;
+    margin: 20px;
+}
 
 @media (min-width: 1025px) {
+    
+   .text__block {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text-block__label-value {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    
     .promo-group {
         flex-wrap: nowrap;
     }
@@ -109,4 +259,30 @@ Yellow - #FECE2F
     .promo:last-child {
         margin-right: 0px;
     }
+}
+
+
+
+/*===================Page Specific===================*/
+.hero--homepage {
+    background: url(https://higherlogicdownload.s3.amazonaws.com/UMICH/deed1317-586e-4033-84e1-85f4a3c0e6ed/UploadedFiles/ucS8TGB8Q4KOyQjCCZci_hero_20190126.jpg);
+    background-position: 100% 27%;
+    background-size: cover;
+    height: 400px;
+}
+
+.hero--homepage > .hero__container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero--homepage > .hero__container > .hero__text {
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.hero--homepage > .hero__container > .button--yellow {
+    font-size: 16px;
+    margin-top: 20px;
 }
