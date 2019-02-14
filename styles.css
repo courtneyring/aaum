@@ -8,6 +8,7 @@ Nav Grey - #525F6C
 
 * {
     box-sizing: border-box;
+    line-height: 30px;
 }
 
 #DesktopLogoDiv {
@@ -64,6 +65,16 @@ max-width: none
     padding: 0px;
 }
 
+@media(max-width: 414px) {
+    #MPContentArea {
+        padding: 0px;
+    }
+    
+    #MainCopy_ContentWrapper > .row.row-wide.clearfix.not(:first-of-type) {
+        padding: 0px 10px;
+    }
+}
+
 /* Flex */
 .flex {
     display: flex;
@@ -100,9 +111,10 @@ max-width: none
 
 
 /* Text Block */
-.text__block {
+.text-block {
     display: flex;
     flex-direction: column;
+    margin: 30px 0px;
 }
 
 .text-block__label-value {
@@ -149,9 +161,9 @@ max-width: none
 .hero {
     background-color: #00274c;
     color: white;
-display: flex;
+    display: flex;
     height: 230px;
-justify-content: center;
+    justify-content: center;
     width: 100%;
 }
 
@@ -184,11 +196,27 @@ justify-content: center;
 }
 
 
+@media(max-width:767px) {
+    .hero__container {
+        justify-content: center;
+    }
+    
+    .hero__text {
+        margin-left: 0px;
+        text-align: center;
+    }
+    
+    .hero__icon {
+        left: 0px;
+    }
+}
+
 /*Promo Group*/
 
 .promo-group {
     display: flex;
     flex-wrap: wrap;
+    margin: 30px 0px;
     width: 100%;
 }
 
@@ -199,7 +227,7 @@ justify-content: center;
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    margin: 35px 10px;
+    margin: 0px 10px;
     padding: 40px 20px 20px 20px;
     position: relative;
     width: 100%;
@@ -217,6 +245,50 @@ justify-content: center;
 .promo__body {
     margin-bottom: 15px;
 }
+
+/*Image Card*/
+.image-card {
+    margin: 30px 0px;
+}
+
+.image-card__title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.image-card__container {
+    display: flex;
+    height: 530px;
+}
+
+.image-card__col {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.image-card__iframe {
+    margin-top: -30px;
+}
+
+.image-card__col:first-of-type {
+    margin-right: 20px;
+}
+
+.image-card__col:last-of-type {
+    margin-left: 20px;
+}
+
+.image-card__image {
+    background-image: url(https://higherlogicdownload.s3.amazonaws.com/UMICH/deed1317-586e-4033-84e1-85f4a3c0e6ed/UploadedFiles/2NuZN88wQsOKwISUl8pK_event.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
 
 /*Social Links*/
 .social {
