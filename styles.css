@@ -258,7 +258,7 @@ max-width: none
 
 .image-card__container {
     display: flex;
-    height: 530px;
+    height: 930px;
 }
 
 .image-card__col {
@@ -287,6 +287,25 @@ max-width: none
     background-position: center;
     height: 100%;
     width: 100%;
+}
+
+@media (max-width: 1025px) {
+    .image-card__container {
+        flex-direction: column
+    }
+    
+    .image-card__col {
+        margin: 0px;
+        width: 100%;
+    }
+    
+    .image-card__iframe {
+        margin-top: 0px
+    }
+    
+    .image-card__image {
+        max-height: 350px;
+    }
 }
 
 
